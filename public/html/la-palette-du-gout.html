@@ -5,7 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/c38774f64d.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Restaurant "La palette du goût" - ohmyfood!</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <a href="index.html" class="header__linkback"
+        ><i class="fas fa-arrow-left"></i
+      ></a>
+      <h1 class="header__title">ohmyfood</h1>
+      <img
+        src="/public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        alt="image d'un plat gastronomique"
+        class="header__img"
+      />
+    </header>
+
+    <!-- ******************SECTION MENU********************** -->
+    <main class="menu">
+      <h2 class="menu__title">La palette du goût</h2>
+
+      <!-- ************ ENTREE ************** -->
+      <div class="menu__item">
+        <h3 class="menu__item--title">Entrées</h3>
+        <div class="menu__item--dish">
+          <h4 class="dish__title">Fricassée d'escargot</h4>
+          <p class="dish__description">Au piment d'espelette</p>
+          <p class="dish__price">25€</p>
+        </div>
+        <div class="menu__item--dish">
+          <h4 class="dish__title">Foie gras de canard mi-cuit</h4>
+          <p class="dish__description">Et ses copeaux de truffe noire</p>
+          <p class="dish__price">35€</p>
+        </div>
+        <div class="menu__item--dish">
+          <h4 class="dish__title">Oeuf au plat</h4>
+          <p class="dish__description">
+            Assaisonné à ma truffe sur lit de poireaux
+          </p>
+          <p class="dish__price">20€</p>
+        </div>
+      </div>
+
+      <!-- ************ PLATS ************** -->
+      <div class="menu__item">
+        <h3 class="menu__item--title">Plats</h3>
+        <div class="menu__item--dish">
+          <h4 class="dish__title">Filet de boeuf aux herbes</h4>
+          <p class="dish__description">
+            Accompagné de sa ribambelle de légumes
+          </p>
+          <p class="dish__price">40€</p>
+        </div>
+        <div class="menu__item--dish">
+          <h4 class="dish__title">Parmentier de queue de boeuf</h4>
+          <p class="dish__description">
+            A la truffe noire sur sa purée de panais
+          </p>
+          <p class="dish__price">35€</p>
+        </div>
+        <div class="menu__item--dish">
+          <h4 class="dish__title">Filet de Turbot</h4>
+          <p class="dish__description">Aux agrumes</p>
+          <p class="dish__price">44€</p>
+        </div>
+      </div>
+
+      <!-- ************ DESSERTS ************** -->
+      <div class="menu__item">
+        <h3 class="menu__item--title">Desserts</h3>
+        <div class="menu__item--dish">
+          <h4 class="dish__title">Paris-Brest</h4>
+          <p class="dish__description">Revisité</p>
+          <p class="dish__price">18€</p>
+        </div>
+        <div class="menu__item--dish">
+          <h4 class="dish__title">Macaron au chocolat d'exception</h4>
+          <p class="dish__description">Et glace à la vanille de madagascar</p>
+          <p class="dish__price">22€</p>
+        </div>
+        <div class="menu__item--dish">
+          <h4 class="dish__title">Mousse au chocolat</h4>
+          <p class="dish__description">
+            Au piment d'espelette et à la truffe noire
+          </p>
+          <p class="dish__price">23€</p>
+        </div>
+      </div>
+
+      <button class="order">Commander</button>
+    </main>
+
+    <!-- ************************ SECTION FOOTER ************************ -->
+    <footer class="footer">
+      <h1 class="footer__title">ohmyfood</h1>
+      <a href="#" class="footer__link"
+        ><i class="fas fa-utensils"></i>Proposer un restaurant</a
+      >
+      <a href="#" class="footer__link"
+        ><i class="fas fa-hands-helping"></i>Devenir partenaire</a
+      >
+      <a href="#" class="footer__link">Mentions légales</a>
+      <a href="mailto:contact@ohmyfood.com" class="footer__link">contact</a>
+    </footer>
+  </body>
 </html>
