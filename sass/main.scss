@@ -3,6 +3,8 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 
+@import "./pages/restaurant.scss";
+
 @import "./base/typographie";
 @import "./base/animations";
 @import "./base/base";
@@ -154,6 +156,7 @@
 
   &__card--img {
     position: relative;
+    border-radius: 15px 15px 0 0;
   }
 
   &__card--new {
@@ -196,9 +199,10 @@
   display: flex;
   flex-direction: column;
   color: white;
+  padding-bottom: 1.5rem;
 
   &__title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: normal;
     padding: 1rem 0 0.5rem 1rem;
     margin: 0;
@@ -206,7 +210,7 @@
 
   &__link {
     margin: 0.5rem 0 0 1rem;
-    font-size: 0.85rem;
+    font-size: 1rem;
 
     &:hover {
       text-decoration: underline;

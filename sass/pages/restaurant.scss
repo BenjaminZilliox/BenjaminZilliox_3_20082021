@@ -1,0 +1,52 @@
+.header {
+  margin: 2rem 0;
+  position: relative;
+
+  &__return {
+    position: absolute;
+    @include center;
+    left: 2rem;
+    top: 120%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.4rem;
+  }
+
+  &__title {
+    @include center;
+  }
+}
+
+.menu {
+  background-color: #f6f6f6;
+  border-radius: 35px 35px 0 0;
+  margin-top: -4rem;
+  position: relative;
+  z-index: 1;
+
+  &__title {
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  &__item {
+    padding: 0 1rem;
+
+    &--title {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1.3rem;
+      position: relative;
+      padding-bottom: 0.4rem;
+
+      &::before {
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $color-tertiary;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
