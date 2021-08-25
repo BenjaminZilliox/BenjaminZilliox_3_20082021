@@ -14,7 +14,7 @@
   <body>
     <header class="header">
       <a href="index.html" class="header__linkback"
-        ><i class="fas fa-arrow-left"></i
+        ><i class="fas fa-arrow-left header__return"></i
       ></a>
       <h1 class="header__title">ohmyfood</h1>
       <img
@@ -26,29 +26,97 @@
 
     <!-- ******************SECTION MENU********************** -->
     <main class="menu">
-      <h2 class="menu__title">La note enchantée</h2>
+      <div class="menu__header">
+        <h2 class="menu__title">La note enchantée</h2>
+        <div class="menu__heart">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="far"
+            data-icon="heart"
+            class="svg-inline--fa fa-heart fa-w-16 heartEmpty"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <defs>
+              <linearGradient
+                id="gradient-fill"
+                x1="0"
+                y1="0"
+                x2="800"
+                y2="0"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0" stop-color="#9356dc" />
+
+                <stop offset="0.16666666666666666" stop-color="#a95adc" />
+
+                <stop offset="0.3333333333333333" stop-color="#bd5fdc" />
+
+                <stop offset="0.5" stop-color="#cf64dc" />
+
+                <stop offset="0.6666666666666666" stop-color="#e06adb" />
+
+                <stop offset="0.8333333333333333" stop-color="#f071da" />
+
+                <stop offset="1" stop-color="#ff79da" />
+              </linearGradient>
+            </defs>
+            <path
+              fill=""
+              d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
+            ></path>
+          </svg>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="heart"
+            class="svg-inline--fa fa-heart fa-w-16 heart"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill=""
+              d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+            ></path>
+          </svg>
+        </div>
+      </div>
 
       <!-- ************ ENTREE ************** -->
       <div class="menu__item">
         <h3 class="menu__item--title">Entrées</h3>
         <div class="menu__item--dish">
-          <h4 class="dish__title">Raviole de foie gras</h4>
-          <p class="dish__description">Accompagnés de leur crème à la truffe</p>
+          <div class="dish">
+            <h4 class="dish__title">Raviole de foie gras</h4>
+            <p class="dish__description">
+              Accompagnés de leur crème à la truffe
+            </p>
+          </div>
           <p class="dish__price">25€</p>
         </div>
         <div class="menu__item--dish">
-          <h4 class="dish__title">Caviar osciètre</h4>
-          <p class="dish__description">Sur blini à la farine de blé noir</p>
+          <div class="dish">
+            <h4 class="dish__title">Caviar osciètre</h4>
+            <p class="dish__description">Sur blini à la farine de blé noir</p>
+          </div>
           <p class="dish__price">35€</p>
         </div>
         <div class="menu__item--dish">
-          <h4 class="dish__title">Homard et espuma de langoustine</h4>
-          <p class="dish__description">Marinés aux zestes d'orange</p>
+          <div class="dish">
+            <h4 class="dish__title">Homard et espuma de langoustine</h4>
+            <p class="dish__description">Marinés aux zestes d'orange</p>
+          </div>
           <p class="dish__price">20€</p>
         </div>
         <div class="menu__item--dish">
-          <h4 class="dish__title">Foie gras de canard cuit entier</h4>
-          <p class="dish__description">Confiture de figue et pain toasté</p>
+          <div class="dish">
+            <h4 class="dish__title">Foie gras de canard cuit entier</h4>
+            <p class="dish__description">Confiture de figue et pain toasté</p>
+          </div>
           <p class="dish__price">35€</p>
         </div>
       </div>
@@ -57,18 +125,24 @@
       <div class="menu__item">
         <h3 class="menu__item--title">Plats</h3>
         <div class="menu__item--dish">
-          <h4 class="dish__title">Noix de coquilles Saint-Jacques</h4>
-          <p class="dish__description">Sur lit de purée de céleri-rave</p>
+          <div class="dish">
+            <h4 class="dish__title">Noix de coquilles Saint-Jacques</h4>
+            <p class="dish__description">Sur lit de purée de céleri-rave</p>
+          </div>
           <p class="dish__price">40€</p>
         </div>
         <div class="menu__item--dish">
-          <h4 class="dish__title">Langoustine poêlée</h4>
-          <p class="dish__description">Purée de patate douce</p>
+          <div class="dish">
+            <h4 class="dish__title">Langoustine poêlée</h4>
+            <p class="dish__description">Purée de patate douce</p>
+          </div>
           <p class="dish__price">35€</p>
         </div>
         <div class="menu__item--dish">
-          <h4 class="dish__title">Mijoté de queue de boeuf</h4>
-          <p class="dish__description">Et riz sauvage aux zestes de citron</p>
+          <div class="dish">
+            <h4 class="dish__title">Mijoté de queue de boeuf</h4>
+            <p class="dish__description">Et riz sauvage aux zestes de citron</p>
+          </div>
           <p class="dish__price">44€</p>
         </div>
       </div>
@@ -77,25 +151,33 @@
       <div class="menu__item">
         <h3 class="menu__item--title">Desserts</h3>
         <div class="menu__item--dish">
-          <h4 class="dish__title">Macaron noisette et chocolat</h4>
-          <p class="dish__description">
-            Glace au caramel brun et sel de Guérande
-          </p>
+          <div class="dish">
+            <h4 class="dish__title">Macaron noisette et chocolat</h4>
+            <p class="dish__description">
+              Glace au caramel brun et sel de Guérande
+            </p>
+          </div>
           <p class="dish__price">18€</p>
         </div>
         <div class="menu__item--dish">
-          <h4 class="dish__title">Baba au rhum revisité</h4>
-          <p class="dish__description">Avec son coulis de citron</p>
+          <div class="dish">
+            <h4 class="dish__title">Baba au rhum revisité</h4>
+            <p class="dish__description">Avec son coulis de citron</p>
+          </div>
           <p class="dish__price">22€</p>
         </div>
         <div class="menu__item--dish">
-          <h4 class="dish__title">Tarte au citron meringuée</h4>
-          <p class="dish__description">Destructurée</p>
+          <div class="dish">
+            <h4 class="dish__title">Tarte au citron meringuée</h4>
+            <p class="dish__description">Destructurée</p>
+          </div>
           <p class="dish__price">23€</p>
         </div>
       </div>
 
-      <button class="order">Commander</button>
+      <div class="menu__order">
+        <button class="order">Commander</button>
+      </div>
     </main>
 
     <!-- ************************ SECTION FOOTER ************************ -->

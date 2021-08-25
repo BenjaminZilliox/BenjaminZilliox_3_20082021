@@ -136,6 +136,10 @@
         left: -12px;
         top: 21px;
       }
+
+      &:hover {
+        background-color: rgba($color: $color-primary, $alpha: 0.1);
+      }
     }
 
     &--step i {
