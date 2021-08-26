@@ -75,24 +75,57 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 2rem;
+      animation: appear 1s ease-out forwards;
+      cursor: pointer;
+      overflow: hidden;
+
+      &:hover .dish__validation {
+        animation: translate 0.5s ease-out forwards;
+      }
+
+      &:hover .dish__price {
+        animation: translate 0.5s ease-out forwards;
+      }
+
+      &:hover .dish__validation--icon {
+        animation: roll 0.5s ease-out forwards;
+      }
     }
 
     .dish {
       padding: 0.5rem 0 0.5rem 1rem;
+      @include nowrap;
 
       &__title {
         padding: 0;
         margin: 0.5rem 0 0 0;
+        @include nowrap;
       }
 
       &__description {
         padding: 0;
         margin: 0 0 0.5rem 0;
+        @include nowrap;
       }
 
       &__price {
         padding: 0 1rem;
         font-weight: 700;
+      }
+
+      &__validation {
+        @include center;
+        background-color: $color-tertiary;
+        width: 70px;
+        height: 70px;
+        border-radius: 0 15px 15px 0;
+        position: absolute;
+        right: -70px;
+
+        &--icon {
+          color: white;
+          font-size: 1.7rem;
+        }
       }
     }
   }
