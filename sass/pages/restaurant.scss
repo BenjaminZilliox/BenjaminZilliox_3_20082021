@@ -85,6 +85,8 @@
 
       &:hover .dish__price {
         animation: translate 0.5s ease-out forwards;
+        margin-left: 70px;
+        transition-duration: 0.5s;
       }
 
       &:hover .dish__validation--icon {
