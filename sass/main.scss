@@ -3,6 +3,8 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 
+@import "./pages/restaurant.scss";
+
 @import "./base/typographie";
 @import "./base/animations";
 @import "./base/base";
@@ -111,6 +113,9 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
+    @media (min-width: 950px) {
+      flex-direction: row;
+    }
 
     &--step {
       list-style-type: none;
@@ -134,6 +139,10 @@
         left: -12px;
         top: 21px;
       }
+
+      &:hover {
+        background-color: rgba($color: $color-primary, $alpha: 0.1);
+      }
     }
 
     &--step i {
@@ -154,6 +163,7 @@
 
   &__card--img {
     position: relative;
+    border-radius: 15px 15px 0 0;
   }
 
   &__card--new {
@@ -196,9 +206,10 @@
   display: flex;
   flex-direction: column;
   color: white;
+  padding-bottom: 1.5rem;
 
   &__title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: normal;
     padding: 1rem 0 0.5rem 1rem;
     margin: 0;
@@ -206,7 +217,7 @@
 
   &__link {
     margin: 0.5rem 0 0 1rem;
-    font-size: 0.85rem;
+    font-size: 1rem;
 
     &:hover {
       text-decoration: underline;

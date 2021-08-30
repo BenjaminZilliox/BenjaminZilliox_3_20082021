@@ -1,0 +1,149 @@
+.header {
+  margin: 2rem 0;
+  position: relative;
+
+  &__return {
+    position: absolute;
+    @include center;
+    left: 2rem;
+    top: 120%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.4rem;
+  }
+
+  &__title {
+    @include center;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+.menu {
+  background-color: #f6f6f6;
+  border-radius: 35px 35px 0 0;
+  margin-top: -4rem;
+  position: relative;
+  z-index: 1;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    padding: 1.5rem 1rem 0;
+  }
+
+  &__heart {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    margin: 1.5rem 2rem 0 0;
+  }
+
+  &__container {
+    @media (min-width: 950px) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    padding: 0 1rem;
+    @media (min-width: 950px) {
+      width: 31.5%;
+      padding: 0 0.5rem;
+    }
+
+    &--title {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1.3rem;
+      position: relative;
+      padding-bottom: 0.4rem;
+
+      &::before {
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $color-tertiary;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    &--dish {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      animation: appear 1s ease-out forwards;
+      cursor: pointer;
+      overflow: hidden;
+
+      &:hover .dish__validation {
+        animation: translate 0.5s ease-out forwards;
+      }
+
+      &:hover .dish__price {
+        animation: translate 0.5s ease-out forwards;
+        margin-left: 70px;
+        transition-duration: 0.5s;
+      }
+
+      &:hover .dish__validation--icon {
+        animation: roll 0.5s ease-out forwards;
+      }
+    }
+
+    .dish {
+      padding: 0.5rem 0 0.5rem 1rem;
+      @include nowrap;
+
+      &__title {
+        padding: 0;
+        margin: 0.5rem 0 0 0;
+        @include nowrap;
+      }
+
+      &__description {
+        padding: 0;
+        margin: 0 0 0.5rem 0;
+        @include nowrap;
+      }
+
+      &__price {
+        padding: 0 1rem;
+        font-weight: 700;
+      }
+
+      &__validation {
+        @include center;
+        background-color: $color-tertiary;
+        width: 70px;
+        height: 70px;
+        border-radius: 0 15px 15px 0;
+        position: absolute;
+        right: -70px;
+
+        &--icon {
+          color: white;
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+
+  &__order {
+    @include center;
+    padding: 1rem 0 3rem 0;
+  }
+}
