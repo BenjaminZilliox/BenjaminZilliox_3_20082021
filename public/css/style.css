@@ -47,8 +47,19 @@
   position: relative;
   margin: 1.5rem 2rem 0 0;
 }
+@media (min-width: 950px) {
+  .menu__container {
+    display: flex;
+  }
+}
 .menu__item {
   padding: 0 1rem;
+}
+@media (min-width: 950px) {
+  .menu__item {
+    width: 31.5%;
+    padding: 0 0.5rem;
+  }
 }
 .menu__item--title {
   text-transform: uppercase;
@@ -388,6 +399,11 @@ button:hover {
   flex-direction: column;
   margin: 0;
   padding: 0;
+}
+@media (min-width: 950px) {
+  .functioning__list {
+    flex-direction: row;
+  }
 }
 .functioning__list--step {
   list-style-type: none;

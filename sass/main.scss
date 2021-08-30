@@ -113,6 +113,9 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
+    @media (min-width: 950px) {
+      flex-direction: row;
+    }
 
     &--step {
       list-style-type: none;
