@@ -18,7 +18,7 @@
 
   &__img {
     max-width: 100%;
-    height: 100%;
+    max-height: 400px;
   }
 }
 
@@ -85,21 +85,25 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 2rem;
+      -webkit-animation: appear 1s ease-out forwards;
       animation: appear 1s ease-out forwards;
       cursor: pointer;
       overflow: hidden;
 
       &:hover .dish__validation {
+        -webkit-animation: translate 0.5s ease-out forwards;
         animation: translate 0.5s ease-out forwards;
       }
 
       &:hover .dish__price {
+        -webkit-animation: translate 0.5s ease-out forwards;
         animation: translate 0.5s ease-out forwards;
         margin-left: 70px;
         transition-duration: 0.5s;
       }
 
       &:hover .dish__validation--icon {
+        -webkit-animation: roll 0.5s ease-out forwards;
         animation: roll 0.5s ease-out forwards;
       }
     }

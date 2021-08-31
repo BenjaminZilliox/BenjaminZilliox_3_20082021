@@ -49,6 +49,16 @@
 }
 
 // ************** ANIMATION APPARITION MENU ************
+@-webkit-keyframes appear {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes appear {
   0% {
     transform: translateY(-100px);
@@ -66,15 +76,27 @@
 
 .delay2 {
   opacity: 0;
+  -webkit-animation-delay: 0.35s;
   animation-delay: 0.35s;
 }
 
 .delay3 {
   opacity: 0;
+  -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
 
 // ************* ANIMATION VALIDATION **************
+@-webkit-keyframes roll {
+  0% {
+    transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
 @keyframes roll {
   0% {
     transform: rotate(-360deg);
@@ -83,6 +105,15 @@
   100% {
     transform: rotate(0deg);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes translate {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-70px);
   }
 }
 

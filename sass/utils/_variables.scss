@@ -5,3 +5,9 @@ $color-tertiary: #99e2d0;
 $box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 
 $gradient: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+
+$ligthenGradient: linear-gradient(
+  0deg,
+  lighten(#9356dc, 3) 0%,
+  lighten(#ff79da, 3) 100%
+);

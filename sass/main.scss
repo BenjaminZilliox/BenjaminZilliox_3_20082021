@@ -158,12 +158,13 @@
 
   &__card {
     background-color: white;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px;
   }
 
   &__card--img {
     position: relative;
     border-radius: 15px 15px 0 0;
+    max-height: 14rem;
   }
 
   &__card--new {

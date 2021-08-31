@@ -22,7 +22,7 @@
 }
 .header__img {
   max-width: 100%;
-  height: 100%;
+  max-height: 400px;
 }
 
 .menu {
@@ -84,19 +84,23 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  -webkit-animation: appear 1s ease-out forwards;
   animation: appear 1s ease-out forwards;
   cursor: pointer;
   overflow: hidden;
 }
 .menu__item--dish:hover .dish__validation {
+  -webkit-animation: translate 0.5s ease-out forwards;
   animation: translate 0.5s ease-out forwards;
 }
 .menu__item--dish:hover .dish__price {
+  -webkit-animation: translate 0.5s ease-out forwards;
   animation: translate 0.5s ease-out forwards;
   margin-left: 70px;
   transition-duration: 0.5s;
 }
 .menu__item--dish:hover .dish__validation--icon {
+  -webkit-animation: roll 0.5s ease-out forwards;
   animation: roll 0.5s ease-out forwards;
 }
 .menu__item .dish {
@@ -197,6 +201,16 @@ h1 {
     z-index: -10;
   }
 }
+@-webkit-keyframes appear {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes appear {
   0% {
     transform: translateY(-100px);
@@ -213,14 +227,26 @@ h1 {
 
 .delay2 {
   opacity: 0;
+  -webkit-animation-delay: 0.35s;
   animation-delay: 0.35s;
 }
 
 .delay3 {
   opacity: 0;
+  -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
 
+@-webkit-keyframes roll {
+  0% {
+    transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
 @keyframes roll {
   0% {
     transform: rotate(-360deg);
@@ -229,6 +255,14 @@ h1 {
   100% {
     transform: rotate(0deg);
     opacity: 1;
+  }
+}
+@-webkit-keyframes translate {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-70px);
   }
 }
 @keyframes translate {
@@ -261,12 +295,18 @@ a:visited {
   grid-template-columns: 1fr;
   row-gap: 2rem;
 }
+@media (min-width: 950px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
 
 img {
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
-  max-height: 14rem;
   position: relative;
 }
 
@@ -279,10 +319,12 @@ button {
   border-radius: 30px;
   padding: 0.75rem 1.5rem;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-  transition: 0.3s;
+  transition: 0.2s;
 }
 button:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(0deg, #9b63df 0%, #ff88de 100%);
 }
 
 .heartEmpty {
@@ -293,7 +335,7 @@ button:hover {
   fill: url(#gradient-fill);
   position: absolute;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .heart:hover {
   opacity: 1;
@@ -441,11 +483,12 @@ button:hover {
 }
 .restaurant__card {
   background-color: white;
-  border-radius: 0 0 15px 15px;
+  border-radius: 15px;
 }
 .restaurant__card--img {
   position: relative;
   border-radius: 15px 15px 0 0;
+  max-height: 14rem;
 }
 .restaurant__card--new {
   background-color: #99e2d0;
