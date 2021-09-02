@@ -438,6 +438,8 @@ button:hover {
   counter-reset: step;
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin: 0;
   padding: 0;
