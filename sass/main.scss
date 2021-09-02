@@ -109,7 +109,7 @@
   &__list {
     counter-reset: step;
     position: relative;
-    display: flex;
+    @include center;
     flex-direction: column;
     margin: 0;
     padding: 0;
